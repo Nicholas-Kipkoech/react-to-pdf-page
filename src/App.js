@@ -87,11 +87,19 @@ function App() {
       >
         <input
           type="text"
-          placeholder="enter pdf name"
+          placeholder="please enter pdf name"
           className="input"
           onChange={(e) => setFilename(e.target.value)}
         />
-        <button onClick={downloadPdf}>Download PDf</button>
+        <button
+          style={{
+            color: "green",
+          }}
+          disabled={filename === ""}
+          onClick={downloadPdf}
+        >
+          Download PDf
+        </button>
       </div>
 
       <div
